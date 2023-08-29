@@ -1,0 +1,29 @@
+curl --request GET \
+  --url http://localhost:8801/api-v1/item/all \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: Insomnia/2023.5.6'
+
+curl --request POST \
+  --url http://localhost:8801/api-v1/item/create \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: Insomnia/2023.5.6' \
+  --data '{
+    "itemCode": "BRG-004",
+    "itemName": "BARANG 004",
+    "itemQty": 9
+}'
+
+curl --request POST \
+  --url 'http://localhost:8801/api-v1/item/updateQty?itemId=1' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: Insomnia/2023.5.6' \
+  --data '{
+	  "itemCode": "BRG-001",
+    "itemName": "BARANG 001",
+    "itemQty": 10
+}'
+
+curl --request POST \
+  --url 'http://localhost:8801/api-v1/item/deleteItem?itemId=2' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: Insomnia/2023.5.6'
